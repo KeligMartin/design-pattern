@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace ESGI.DesignPattern.Projet
 {
@@ -17,29 +16,17 @@ namespace ESGI.DesignPattern.Projet
             Console.WriteLine("Items : " + checkout.Items.Count);
             foreach (var item in checkout.Items)
             {
-                Console.WriteLine(item.Name + " " + item.Amount);
+                Console.WriteLine(item.Name + " " + item.Amount + " EUR");
             }
-            Console.WriteLine("Amount without taxes = " + Amount);
-            Console.WriteLine("Tax : " + Taxes);
+
+            Console.WriteLine("Amount without taxes = " + Amount + " EUR");
+            Console.WriteLine("Taxes : ");
             foreach (var tax in Taxes)
             {
-                Console.WriteLine("tax " + tax);
+                Console.WriteLine(tax + "% ---- " + checkout.GetTaxTotal(tax) + " EUR");
             }
 
-            Console.WriteLine("Total : " + Total);
-        }
-
-        public IEnumerable<string> Format(Checkout checkout)
-        {
-            return new List<string>() { //
-                    "Receipt", //
-                    "=======", //
-                    "Item 1 ... " + Amount, //
-                    "Tax    ... " + Taxes, //
-                    "----------------", //
-                    "Total  ... " + Total //
-            };
+            Console.WriteLine("Total : " + Total + " EUR");
         }
     }
-    // TOOD ajouter une liste d'Item dans Receipt
 }

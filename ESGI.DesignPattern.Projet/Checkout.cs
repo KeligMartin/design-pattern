@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ESGI.DesignPattern.Projet
 {
     public class Checkout
     {
-        public List<Item> Items { get; set; }
+        public List<Item> Items { get; }
 
         public Checkout(List<Item> items)
         {
@@ -17,44 +16,42 @@ namespace ESGI.DesignPattern.Projet
         {
             var receipt = new Receipt();
             receipt.Amount = GetAmount();
-            receipt.Taxes = GetTaxes(Items);
-            receipt.Total = GetTotal(Items);
-            ReceiptRepository.Store(receipt);
+            receipt.Taxes = GetTaxes();
+            receipt.Total = GetTotal();
+            //ReceiptRepository.Store(receipt);
             Console.WriteLine("receipt stored !");
+            receipt.DisplayReceipt(this);
         }
 
         decimal GetAmount()
         {
             decimal amount = 0;
-            foreach (var item in Items)
-            {
-                amount += item.Amount;
-            }
-
+            Items.ForEach(item => amount += item.Amount);
             return amount;
         }
 
-        decimal GetTotal(List<Item> items)
+        decimal GetTotal()
         {
             decimal total = 0;
-            foreach (var item in items)
-            {
-                total += item.Amount + (item.Amount * item.Tax / 100);
-            }
 
+            Items.ForEach(item => total += item.Amount + item.Amount * item.Tax / 100);
             return total;
         }
 
-        HashSet<decimal> GetTaxes(List<Item> items)
+        HashSet<decimal> GetTaxes()
         {
             HashSet<decimal> taxes = new HashSet<decimal>();
-
-            foreach (var item in items)
-            {
-                taxes.Add(item.Tax);
-            }
-
+            
+            Items.ForEach(item => taxes.Add(item.Tax));
             return taxes;
+        }
+
+        public decimal GetTaxTotal(decimal tax)
+        {
+            decimal total = 0;
+            var items = Items.FindAll(item => item.Tax == tax);
+            items.ForEach(item => total += item.Amount * tax / 100);
+            return total;
         }
     }
 }
