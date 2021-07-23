@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ck3WsYiNMZNJ4LP4GIssZWJV5CfHcxN/KXzqFAO4w0EnMaAh/q/IXNf3IwJ1LM9vYxucNI1/mCKEj38rMrEqUg==",
+  "dgSpecHash": "UztM1PYpZdMzDFBDjmy0zub5hlyTW0Wy9rthvxexBbCObPlzUs1fY78pHqo18jaPKiztJC4TxVaxdd848yHUgg==",
   "success": true,
   "projectFilePath": "/home/kelig/Bureau/4AL/AL2/Projets/8/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet.csproj",
   "expectedPackageFiles": [
@@ -104,10 +104,7 @@
     "/home/kelig/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/home/kelig/.nuget/packages/system.xml.xmldocument/4.0.1/system.xml.xmldocument.4.0.1.nupkg.sha512",
     "/home/kelig/.nuget/packages/system.xml.xpath/4.0.1/system.xml.xpath.4.0.1.nupkg.sha512",
-    "/home/kelig/.nuget/packages/system.xml.xpath.xmldocument/4.0.1/system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
-    "/home/kelig/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "/home/kelig/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "/home/kelig/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.17/microsoft.netcore.app.host.linux-x64.3.1.17.nupkg.sha512"
+    "/home/kelig/.nuget/packages/system.xml.xpath.xmldocument/4.0.1/system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }
