@@ -14,7 +14,7 @@ namespace ESGI.DesignPattern.Projet
             items.Add(item1);
             items.Add(item2);
             Checkout checkout = new Checkout(items);
-            checkout.CreateReceipt(20);
+            checkout.CreateReceipt();
         }
     }
 }

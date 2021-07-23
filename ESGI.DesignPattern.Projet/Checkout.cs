@@ -12,7 +12,7 @@ namespace ESGI.DesignPattern.Projet
             Items = items;
         }
 
-        public void CreateReceipt(decimal tax)
+        public void CreateReceipt()
         {
             var receipt = new Receipt();
             receipt.Amount = GetAmount();
