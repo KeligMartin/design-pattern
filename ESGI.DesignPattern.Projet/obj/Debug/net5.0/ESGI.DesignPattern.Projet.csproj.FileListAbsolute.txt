@@ -37,3 +37,4 @@
 /home/kelig/Bureau/4AL/AL2/Projets/8/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet/obj/Debug/net5.0/ref/ESGI.DesignPattern.Projet.dll
 /home/kelig/Bureau/4AL/AL2/Projets/8/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet/obj/Debug/net5.0/ESGI.DesignPattern.Projet.pdb
 /home/kelig/Bureau/4AL/AL2/Projets/8/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet/obj/Debug/net5.0/ESGI.DesignPattern.Projet.genruntimeconfig.cache
+/home/kelig/Bureau/4AL/AL2/Projets/8/ESGI.DesignPattern.Projet/ESGI.DesignPattern.Projet/bin/Debug/net5.0/Npgsql.dll

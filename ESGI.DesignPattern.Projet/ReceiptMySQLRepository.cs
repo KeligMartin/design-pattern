@@ -2,13 +2,13 @@
 
 namespace ESGI.DesignPattern.Projet
 {
-    public class ReceiptRepository
+    public class ReceiptRepository : IRepository
     {
         private static readonly string databaseName = "myshop";
         private static readonly string user = "store";
         private static readonly string pass = "123456";
 
-        public static void Store(Receipt receipt)
+        public void Store(Receipt receipt)
         {
             using (var connection = new MySqlConnection
             {
@@ -26,6 +26,4 @@ namespace ESGI.DesignPattern.Projet
             }
         }
     }
-    
-    // TODO créer un deuxième systeme de connexion ?
 }
