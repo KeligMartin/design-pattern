@@ -18,6 +18,7 @@ namespace ESGI.DesignPattern.Projet
             receipt.Amount = GetAmount();
             receipt.Taxes = GetTaxes();
             receipt.Total = GetTotal();
+            receipt.Tax = GetTotal() - GetAmount();
             
             repository.Store(receipt);
             Console.WriteLine("receipt stored !");

@@ -6,6 +6,8 @@ namespace ESGI.DesignPattern.Projet
     public class Receipt
     {
         public decimal Amount { get; set; }
+        
+        public decimal Tax { get; set; }
         public HashSet<decimal> Taxes { get; set; }
         public decimal Total { get; set; }
 
