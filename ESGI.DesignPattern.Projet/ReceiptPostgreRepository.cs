@@ -7,12 +7,13 @@ namespace ESGI.DesignPattern.Projet
         private static readonly string databaseName = "postgres";
         private static readonly string user = "postgres";
         private static readonly string pass = "postgres";
+        private static readonly string port = "5432";
 
         public void Store(Receipt receipt)
         {
             using (var connection = new NpgsqlConnection
             {
-                ConnectionString = $"Host=localhost;Username={user};Password={pass};Database={databaseName}"
+                ConnectionString = $"Host=localhost;Username={user};Password={pass};Port={port};Database={databaseName}"
             })
             {
                 connection.Open();
