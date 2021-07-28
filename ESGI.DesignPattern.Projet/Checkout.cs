@@ -12,7 +12,7 @@ namespace ESGI.DesignPattern.Projet
             Items = items;
         }
 
-        public void CreateReceipt(IRepository repository)
+        public Receipt CreateReceipt(IRepository repository)
         {
             var receipt = new Receipt();
             receipt.Amount = GetAmount();
@@ -23,6 +23,7 @@ namespace ESGI.DesignPattern.Projet
             repository.Store(receipt);
             Console.WriteLine("receipt stored !");
             receipt.DisplayReceipt(this);
+            return receipt;
         }
 
         decimal GetAmount()
