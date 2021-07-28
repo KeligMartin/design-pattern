@@ -17,4 +17,6 @@ namespace ESGI.DesignPattern.Projet
             checkout.CreateReceipt(new ReceiptPostgreRepository());
         }
     }
+    
+    // TODO implémenter les tests
 }
